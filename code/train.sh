@@ -1,7 +1,7 @@
 python run.py \
     --output_dir=./saved_models \
-    --tokenizer_name=microsoft/codebert-base \
-    --model_name_or_path=microsoft/codebert-base \
+    --tokenizer_name=neulab/codebert-cpp \
+    --model_name_or_path=neulab/codebert-cpp \
     --do_train \
     --train_data_file=../dataset/train.jsonl \
     --eval_data_file=../dataset/valid.jsonl \
