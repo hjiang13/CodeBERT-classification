@@ -323,6 +323,7 @@ def main():
 
     # Training
     if args.do_train:
+        logger.info("Hailong: do training \n")
         train_dataset = TextDataset(tokenizer, args,args.train_data_file)
         train(args, train_dataset, model, tokenizer)
 
