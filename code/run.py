@@ -73,9 +73,9 @@ class TextDataset(Dataset):
         self.examples = []
         with open(file_path) as f:
             for line in f:
-                logger.info("Hailong: loading lines from file \n")
+                #logger.info("Hailong: loading lines from file \n")
                 js=json.loads(line.strip())
-                logger.info("Hailong: convert_examples_to_features \n")
+                #logger.info("Hailong: convert_examples_to_features \n")
                 self.examples.append(convert_examples_to_features(js,tokenizer,args))
         if 'train' in file_path:
             for idx, example in enumerate(self.examples[:3]):
@@ -133,7 +133,7 @@ def train(args, train_dataset, model, tokenizer):
     for idx in range(args.num_train_epochs): 
         bar = tqdm(train_dataloader,total=len(train_dataloader))
         losses=[]
-        logger.info("Hailong: begin to integrate")
+        #logger.info("Hailong: begin to integrate")
         for step, batch in enumerate(bar):
             inputs = batch[0].to(args.device)        
             labels=batch[1].to(args.device) 
@@ -326,9 +326,9 @@ def main():
 
     # Training
     if args.do_train:
-        logger.info("Hailong: do training \n")
+        logger.info("Hailong: do training")
         train_dataset = TextDataset(tokenizer, args,args.train_data_file)
-        logger.info("Hailong: train_dataset has been set \n")
+        logger.info("Hailong: train_dataset has been set")
         train(args, train_dataset, model, tokenizer)
 
     # Evaluation
