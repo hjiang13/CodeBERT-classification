@@ -3,7 +3,7 @@ python run.py \
     --tokenizer_name=neulab/codebert-cpp \
     --model_name_or_path=neulab/codebert-cpp \
     --do_train \
-    --train_data_file=../dataset/train_resilience.json \
+    --train_data_file=../dataset/train_resilience.jsonl \
     --eval_data_file=../dataset/valid_resilience.jsonl \
     --test_data_file=../dataset/test_resilience.jsonl \
     --num_train_epochs 20 \
