@@ -75,6 +75,7 @@ class TextDataset(Dataset):
             for line in f:
                 logger.info("Hailong: loading lines from file \n")
                 js=json.loads(line.strip())
+                logger.info("Hailong: convert_examples_to_features \n")
                 self.examples.append(convert_examples_to_features(js,tokenizer,args))
         if 'train' in file_path:
             for idx, example in enumerate(self.examples[:3]):
