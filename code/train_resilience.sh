@@ -6,7 +6,7 @@ python run.py \
     --train_data_file=../dataset/train_resilience.jsonl \
     --eval_data_file=../dataset/valid_resilience.jsonl \
     --test_data_file=../dataset/test_resilience.jsonl \
-    --num_train_epochs 20 \
+    --num_train_epochs 5 \
     --block_size 256 \
     --train_batch_size 4 \
     --eval_batch_size 4 \
