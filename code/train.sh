@@ -3,6 +3,7 @@ python run.py \
     --tokenizer_name=neulab/codebert-cpp \
     --model_name_or_path=neulab/codebert-cpp \
     --do_train \
+    --do_test \
     --train_data_file=../dataset/train.jsonl \
     --eval_data_file=../dataset/valid.jsonl \
     --test_data_file=../dataset/test.jsonl \
